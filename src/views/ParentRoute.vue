@@ -11,6 +11,8 @@
           <ion-title size="large">Tab 3</ion-title>
         </ion-toolbar>
       </ion-header>
+
+      <button @click="gotoChild()">Goto Child</button>
       
       <ExploreContainer name="Tab 3 page" />
     </ion-content>
@@ -21,8 +23,20 @@
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
 import ExploreContainer from '@/components/ExploreContainer.vue';
 
+import { useRouter } from 'vue-router';
+
 export default  {
-  name: 'Tab3',
-  components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage }
+  name: 'ParentRoute',
+  components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage },
+  setup() {
+    const router = useRouter();
+    const gotoChild = () => {
+      return router.replace('/tabs/child-1');
+    }
+
+    return {
+      gotoChild
+    }
+  }
 }
 </script>

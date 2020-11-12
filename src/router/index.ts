@@ -9,7 +9,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/parent-route',
-    component: () => import('@/views/Parent.vue')
+    component: () => import('@/views/ParentRoute.vue')
   },
   {
     path: '/tabs/',
@@ -21,11 +21,11 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'child-1',
-        component: () => import('@/views/Tab1.vue')
+        component: () => import('@/views/ChildOne.vue')
       },
       {
         path: 'child-2',
-        component: () => import('@/views/Tab2.vue')
+        component: () => import('@/views/ChildTwo.vue')
       }
     ]
   }
