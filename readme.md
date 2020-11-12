@@ -1,6 +1,6 @@
-#Ionic 5 Issue Regarding Router & Tabs
+# Ionic 5 Issue Regarding Router & Tabs
 
-##How to replicate?
+## How to replicate?
 - Pull down repo
 - Run `npm -i && ionic serve`
 - The app should load in Tab 1
